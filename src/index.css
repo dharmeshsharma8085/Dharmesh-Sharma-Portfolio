@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+@layer base {
+  html {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    color-scheme: dark;
+  }
+
+  code, pre, .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+/* Custom subtle ambient glow */
+.ambient-orange-glow {
+  background: radial-gradient(
+    circle at 70% 20%,
+    rgba(255, 106, 0, 0.18),
+    transparent 45%
+  );
+}
+
+.ambient-orange-spotlight {
+  background: radial-gradient(
+    circle at 50% 50%,
+    rgba(255, 106, 0, 0.15),
+    transparent 60%
+  );
+}
+
+/* Glass effect utilities */
+.glass-pill {
+  background: rgba(10, 10, 10, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-card {
+  background: rgba(17, 17, 17, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #222222;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #FF6A00;
+}
